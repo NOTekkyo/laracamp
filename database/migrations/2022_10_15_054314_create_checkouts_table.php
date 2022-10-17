@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCheckoutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string('card number', 20);
             $table->date('expired');
             $table->string('cvc', 3);
+            $table->boolean('is_paid')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -33,4 +35,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('checkouts');
     }
-};
+}
