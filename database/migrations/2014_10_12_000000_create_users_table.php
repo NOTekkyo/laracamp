@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('occupation')->nullable();
             $table->boolean('is_admin')->default(false);
             $table->rememberToken(); //on login will update
-            $table->timestamps(); //will create created_At & update_At. These field will autofilled on addition/change 
+            $table->timestamps(); 
             $table->softDeletes(); // for deleted_at
         });
     }

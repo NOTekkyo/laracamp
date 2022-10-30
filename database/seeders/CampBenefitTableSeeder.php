@@ -14,7 +14,7 @@ class CampBenefitTableSeeder extends Seeder
      */
     public function run()
     {
-        $campBenefits =[
+        $campBenefits = [
             [
                 'camp_id' => 1,
                 'name'  => 'Pro Techstack Kit',
