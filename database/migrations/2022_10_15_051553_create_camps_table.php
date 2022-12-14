@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCheckoutsTable extends Migration
+class CreateCampsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateCheckoutsTable extends Migration
      */
     public function up()
     {
-        Schema::create('checkouts', function (Blueprint $table) {
+        Schema::create('camps', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('camp_id')->constrained();
-            $table->string('card number', 20);
-            $table->date('expired');
-            $table->string('cvc', 3);
-            $table->boolean('is_paid')->default(false);
+            $table->string('title',100);
+            $table->string('slug',100);
+            $table->integer('price')->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +30,6 @@ class CreateCheckoutsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('checkouts');
+        Schema::dropIfExists('camps');
     }
-}
+};

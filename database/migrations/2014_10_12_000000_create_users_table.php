@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,12 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable(); // not required when using OAuth
+            $table->string('password')->nullable();
+            $table->string('avatar')->nullable();
             $table->string('occupation')->nullable();
-            $table->boolean('is_admin')->default(false);
-            $table->rememberToken(); //on login will update
-            $table->timestamps(); 
-            $table->softDeletes(); // for deleted_at
+            $table->string('is_admin')->default(false);
+            $table->rememberToken();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

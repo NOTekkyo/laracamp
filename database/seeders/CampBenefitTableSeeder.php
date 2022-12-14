@@ -17,54 +17,54 @@ class CampBenefitTableSeeder extends Seeder
         $campBenefits = [
             [
                 'camp_id' => 1,
-                'name'  => 'Pro Techstack Kit',
+                'name' => 'Pro Techstack Kit',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'iMac Pro 2021 & Display',
+                'name' => 'iMac Pro 2021 & Display',
             ],
             [
                 'camp_id' => 1,
-                'name'  => '1-1 Mentoring Program',
+                'name' => '1-1 Mentoring Program',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'Final Project Certificate',
+                'name' => 'Final Project Certification',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'Offline Course Videos',
+                'name' => 'Offline Course Videos',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'Future Job Opportinity',
+                'name' => 'Future Job Opportunity',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'Premium Design Kit',
+                'name' => 'Premium Design Kit',
             ],
             [
                 'camp_id' => 1,
-                'name'  => 'website Builder',
+                'name' => 'Website Builder',
             ],
             [
                 'camp_id' => 2,
-                'name'  => '1-1 Mentoring Program',
+                'name' => '1-1 Mentoring Program',
             ],
             [
                 'camp_id' => 2,
-                'name'  => 'Final Project Certificate',
+                'name' => 'Final Project Certification',
             ],
             [
                 'camp_id' => 2,
-                'name'  => 'Offline Course Videos',
+                'name' => 'Offline Course Videos',
             ],
             [
                 'camp_id' => 2,
-                'name'  => 'Offline Course Videos',
-            ],
+                'name' => 'Offline Course Videos',
+            ]
         ];
-        
+
         CampBenefit::insert($campBenefits);
     }
 }
